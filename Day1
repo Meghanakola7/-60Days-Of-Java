@@ -1,0 +1,23 @@
+Topics:JVM, JDK, IDE Setup
+
+Architecture:
+Step1:Create a java sourcecodewith .java extension
+Step2:Compile the source code using java compiler, which will create bytecode file with .class extension
+Step3:Class loader readsboth the user defined and libraryclasses into the memoryfor execution.
+Step4:Bytecode verifier validates all the bytecodes are valid and do not violate Java’s security restrictions
+Step5:JVMreads bytecodes and translates into machine code for execution. While execution of the program the code will interact to the operating system and hardware
+
+What is JVM?
+It is an interpreter which converts the byte code to machine specific instructions and executes.JVM is the one that calls the main method present in a Java code.TheJVM will differ from platform to platform,and is,platform-specific.
+
+What is JDK?
+The Java Development Kit (JDK) is a software development environment used to develop Java applications and applets. It contains JRE and several development tools, an interpreter/loader (java), a compiler (javac), an archiver (jar), a documentation generator (javadoc) accompanied with another tool.
+JDK=JRE + Development tools
+
+What is JRE?
+The JRE software builds a runtime environment in which Java programs can be executed. The JRE is the on-disk system that takes your Java code, combines it with the needed libraries, and starts the JVM to execute it.
+The JRE contains libraries and software needed by your Java programs to run. JRE is a part of JDK (which we will study later) but can be downloaded separately.
+JRE=JVM + Library Classes
+
+Process:
+sample.java → javac (sample. class) → JVM(sample.obj) → final output
