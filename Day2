@@ -1,0 +1,17 @@
+Topics: Variables,Data types
+
+Variables:
+The Java programming language defines the following kinds of Variables:
+1.Local Variables
+a.Tied to a method
+b.Scope of a local variable is within the method
+
+2.Instance Variables (Non-static)
+a.Tied to an object
+b.Scope of an instance variable is the whole class
+
+3.Static Variables
+a.Tied to a class
+b.Shared by all instances of a class
+
+For Example:
