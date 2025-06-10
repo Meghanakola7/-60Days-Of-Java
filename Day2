@@ -15,3 +15,18 @@ a.Tied to a class
 b.Shared by all instances of a class
 
 For Example:
+Refer to the folder AllCodes -> Variables
+
+------------------------------------------------------------------------
+------------------------------------------------------------------------
+
+Data Types:
+Primitive data types are 
+1.int - (long int(64b),short int(16b)) - 32 bits 
+2.double - (float(32b)) - 64 bits
+3.char             - 16 bits
+4.boolean          - 1 bit 
+5.byte             - 8 bits
+
+For Example:
+Refer to the folder AllCodes -> Prog1
