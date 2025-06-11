@@ -1,0 +1,45 @@
+Topics : Input/output,Scanner.
+
+In Java, input can be given statically by defining values directly in variables or by passing them as method parameters. For dynamic input at runtime, the Scanner class is commonly used.
+
+For Example:
+1.We can define statically like:
+int num1= 19;
+char gender='F';
+double age=20.6;
+boolean disease="true;
+
+2.As a paramter
+public class Information{
+static void Worker(int sal,String name){
+System.out.println("Salary of the worker: "+sal);
+System.out.println("Name of a Worker:"+name);
+}
+}
+//paramter passing
+Worker(100000,"Meghana");
+
+Scanner Class:
+The Scanner class is part of the java.util package and is used to take input from the user during runtime (dynamic input). It can read different data types like int, double, String, etc.
+
+Example:
+public class Information{
+public static void main (String args[])
+{
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter Number1");
+int num1=sc.nextInt();
+System.out.println("Enter Number2:");
+int num2=sc.nextInt();
+if(num1>num2) {
+System.out.println("Greatest number is:"+num1);
+}
+else if(num1==num2){
+System.out.println("both are equal");
+}
+else {
+System.out.println("Greatest number is: " + num2);
+}
+sc.close();
+}
+}
