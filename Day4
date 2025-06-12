@@ -1,0 +1,57 @@
+Topic: Operators
+
+Java provides a set of operators to manipulate operations.
+Types of operators in java are,
+ 1..Arithmetic Operators
+ 2.Unary Operator
+ 3.Relational Operators
+ 4.Logical Operators
+ 5.Simple Assignment Operator
+ 6.Bitwise Operators
+
+Arithematic Operators:
+1.Addition(+): adds two integers
+2.Subtraction(-) :subtracts two integers
+3.Multipplication(*) : multiplies two integers
+4.Division(/) : divides and gives the quotient
+5.Modulus(%) : divides and gives the remainder
+
+Usage with Example:
+------------------------------------------------------------------------------------
+import java.util.*;
+public class OperatorsDemo
+{
+public static void main(String args[]){
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter a number:");
+int num1=sc.nextInt();
+System.out.println("Enter a number:");
+int num2=sc.nextInt();
+int result1=num1+num2;
+int result2=num1-num2;
+int result3=num1*num2;
+System.out.println("Addition result:"+result1);
+System.out.println("Subtraction result:"+result2);
+System.out.println("Multiplication result:"+result3);
+if(num2!=0){
+int result4=num1/num2;
+int result5=num1%num2;
+System.out.println("Division result:"+result4);
+System.out.println("Modulus result:"+result5);
+}
+else{
+System.out.println("Do not enter the value as zero.");
+}
+sc.close();
+}
+}
+---------------------------------------------------------------------------------------
+Output:
+Enter a number:
+15
+Enter a number:
+0
+Addition result:15
+Subtraction result:15
+Multiplication result:0
+Do not enter the value as zero.
