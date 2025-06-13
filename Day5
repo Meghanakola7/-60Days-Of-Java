@@ -5,7 +5,7 @@ syntax :
  if(boolean expression) 
 {
  statement–block;
- }
+ } 
  Next statement;
 Example:
 --------------------------------------------------------------------------------
