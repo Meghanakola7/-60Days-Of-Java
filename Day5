@@ -1,0 +1,85 @@
+Topics : Conditional statements(if,if-else,switch)
+
+if:
+syntax :
+ if(boolean expression) 
+{
+ statement–block;
+ }
+ Next statement;
+Example:
+--------------------------------------------------------------------------------
+import java.util.*;
+public class Main{
+public static void main(String args[]){
+Scanner sc=new Scanner(System.in);
+int num=sc.nextInt();
+if (num > 0) {
+            System.out.println("The number is positive.");
+        }
+}
+}
+--------------------------------------------------------------------------------
+if-else:syntax
+ if(boolean expression)
+ {
+ True-block statements;
+ }
+ else
+ {
+ }
+ False-block statements;
+ Next statement;
+--------------------------------------------------------------------------------
+Example:
+import java.util.*;
+public class Main{
+public static void main(String args[]){
+Scanner sc=new Scanner(System.in);
+int a=sc.nextInt();
+if(a!=0)
+{
+System.out.println("Odd number is:"+a);
+}
+else{
+    System.out.println("Even number:"+a);
+}
+}
+}
+-------------------------------------------------------------------------------
+switch:syntax
+
+ switch (expression)        
+{  
+case value-1 : case-1 block
+ break;
+ case value-2 : case-2 block
+ break;
+ default  : default block
+ break;
+ }
+ statement-x;
+-------------------------------------------------------------------------------
+Example:
+import java.util.*;
+public class SwitchDemo
+{
+public static void main(String args[]){
+Scanner sc=new Scanner(System.in);
+int day=sc.nextInt();
+switch(day) {
+case 1: System.out.println("Monday"); break;
+case 2: System.out.println("Tuesday"); break;
+case 3: System.out.println("Wednesday"); break;
+case 4:System.out.println("Thursday"); break;
+case 5:System.out.println("Friday"); break;
+case 6:System.out.println("Saturday"); break;
+case 7:System.out.println("Sunday"); break;
+default:  System.out.println("Invalid day");break;
+}
+}
+}
+-------------------------------------------------------------------------------
+Refer All Code folder for more codes.
+
+------------------------------------------------------------------------------
