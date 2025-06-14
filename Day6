@@ -43,3 +43,20 @@ System.out.println("Sum of digits:"+sum);
 }
 }
 ------------------------------------------------------------------
+do-while:syntax
+ do
+ {
+ Body of the loop
+ } while(boolean expression);
+------------------------------------------------------------------
+Exmaple:
+public class Sample {
+ public static void main(String[] args) {
+ int i =5;
+ do {
+ System.out.println("i: "+i);
+ i = i + 1;
+ } while (i < 5);
+ }
+ }
+--------------------------------------------------------------------
