@@ -1,0 +1,27 @@
+Topics: Practice 
+
+1.Factorial, Fibonacci, Multiplication table
+2.Sum of digits, Reverse number, Palindrome
+
+-----------------------------------------------------------------------
+Factorial:
+import java.util.*;
+public class Factorial
+{
+	public static void main(String[] args) {
+		System.out.println("Hello World");
+		Scanner sc=new Scanner(System.in);
+		int num1=sc.nextInt();
+		int factorial=1;
+		for(int i=1;i<=num1;i++)
+		{
+		    factorial=factorial*i;
+		}
+		System.out.println("Factorial:"+factorial);
+	}
+}
+-----------------------------------------------------------------------
+Fibonacci:
+import java.util.*;
+public class FibonacciDemo{
+public static void main(String args[]){
