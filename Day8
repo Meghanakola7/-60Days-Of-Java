@@ -1,0 +1,32 @@
+Topics : Function/Methods
+
+What are methods in java?
+Java Methods are blocks of code that perform a specific task. A method allows us to reuse code, improving both efficiency and organization. All methods in Java must belong to a class. Methods are similar to functions and expose the behavior of objects.
+Example:
+public class Main{
+public void HelloDis(int a){
+System.out.println("Parameter usage:"+a);
+System.out.println("Hello Developer");
+}
+public static void main(String args[]){
+Main display=new Main();
+display.HelloDis(10);
+}
+}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Example2:
+import java.util.*;
+public class Main{
+public void AreaCal(double height,double breadth){
+double result=0.5*height*breadth;
+System.out.println("Area of Triangle:"+result);
+}
+public static void main(String args[]){
+Scanner sc=new Scanner(System.in);
+double height=sc.nextDouble();
+double breadth=sc.nextDouble();
+Main obj=new Main();
+obj.AreaCal(height,breadth);
+}
+}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
