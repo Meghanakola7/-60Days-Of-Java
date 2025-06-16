@@ -2,7 +2,9 @@ Topics : Function/Methods
 
 What are methods in java?
 Java Methods are blocks of code that perform a specific task. A method allows us to reuse code, improving both efficiency and organization. All methods in Java must belong to a class. Methods are similar to functions and expose the behavior of objects.
-Example:
+
+Example-1: Hello Message Display
+
 public class Main{
 public void HelloDis(int a){
 System.out.println("Parameter usage:"+a);
@@ -14,7 +16,8 @@ display.HelloDis(10);
 }
 }
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Example2:
+Example-2:Area of Triangle
+
 import java.util.*;
 public class Main{
 public void AreaCal(double height,double breadth){
@@ -30,3 +33,144 @@ obj.AreaCal(height,breadth);
 }
 }
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Example-3:leap year check
+
+import java.util.*;
+public class LeapYear{
+public void EvalYear(int year){
+if(year%4==0 && year%100!=0 || year%400==0){
+System.out.println("It is a leap year");
+}
+else{
+System.out.println("It is not a leap year");
+}
+}
+public static void main(String args[]){
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter a year:");
+int year=sc.nextInt();
+LeapYear result=new LeapYear();
+result.EvalYear(year);
+}
+}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Example-4: VoteEligiblity
+
+import java.util.*;
+public class Example4{
+public void EligCheck(int age){
+if(age>=18){
+System.out.println("You are eligible to vote.");
+}
+else{
+System.out.println("You are not eligible.");
+}
+}
+public static void main(String args[]){
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter age:");
+int age=sc.nextInt();
+Example4 eval=new Example4();
+eval.EligCheck(age);
+}
+}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Example-5: Calculator
+
+import java.util.*;
+public class Main{
+public void Calculator(int num1,char operator,int num2){
+int result=0;
+switch(operator){
+case '+' :
+result=num1+num2;
+System.out.println("Addition:"+result);
+break;
+case '-':
+result=num1-num2;
+System.out.println("Subtraction:"+result);
+break;
+case '/':
+if(num2!=0){
+result=num1/num2;
+System.out.println("Division:"+result); 
+}
+else{
+System.out.println("do not enter zero");
+}
+break;
+case '%':
+if(num2!=0){
+result=num1%num2;
+System.out.println("Division:"+result);}
+else{
+System.out.println("do not enter zero");
+}
+break;
+case '*':
+result=num1*num2;
+System.out.println("Multiplication:"+result);
+break;
+}
+}
+public static void main(String args[]){
+Scanner sc=new Scanner(System.in);
+int num1=sc.nextInt();
+char operator=sc.next().charAt(0);
+int num2=sc.nextInt();
+Main ex=new Main();
+ex.Calculator(num1,operator,num2);
+}
+}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Example-6:Perfect Number Checker
+
+import java.util.*;
+public class PerfectNum{
+public void NumCheck(){
+for(int i=o;i<num;i++){
+if(num%i==0)
+{
+sum=sum+i;
+}
+}
+if (sum == num && num != 0) {
+System.out.println(num + " is a Perfect Number.");
+} else {
+System.out.println(num + " is NOT a Perfect Number.");
+}
+}
+public static void main(String[] args) {
+Scanner sc = new Scanner(System.in);
+System.out.print("Enter a number: ");
+int number = sc.nextInt();
+checkPerfect(number);
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Example-7:Electricity Bill Calculator
+
+
+
