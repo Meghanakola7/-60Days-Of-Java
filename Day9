@@ -3,6 +3,105 @@ Topics : Recurrsion
 What is recursion?
 A function in java can call itself such calling of functions by itself is called recursion.
 
-Example1:
+-------------------------------------------------------------------------------------------
+Example1:Armstrong number
+
+import java.util.Scanner;
+public class ArmstrongRecursion {
+static int armstrongSum(int num, int power) {
+if (num == 0) {
+return 0;
+}
+int digit = num % 10;
+return (int)Math.pow(digit, power) + armstrongSum(num / 10, power);
+}
+static int countDigits(int num) {
+if (num == 0) return 0;
+return 1 + countDigits(num / 10);
+}
+public static void main(String[] args) {
+Scanner sc = new Scanner(System.in);
+System.out.print("Enter a number: ");
+int number = sc.nextInt();
+int digits = countDigits(number);
+int sum = armstrongSum(number, digits);
+if (sum == number) {
+System.out.println("It is an Armstrong number.");
+} else {
+System.out.println("It is NOT an Armstrong number.");
+}
+}
+}
+
+---------------------------------------------------------------------------------------------
+Example2:Prime or not
+
+import java.util.Scanner;
+public class PrimeRecursive {
+static boolean isPrime(int num, int i) {
+if (num <= 2) {
+return num == 2;
+}
+if (num % i == 0) {
+return false;
+}
+if (i * i > num) {
+return true;
+}
+return isPrime(num, i + 1);
+}
+public static void main(String[] args) {
+Scanner sc = new Scanner(System.in);
+System.out.print("Enter a number: ");
+int number = sc.nextInt();
+if (isPrime(number, 2)) {
+System.out.println(number + " is a Prime Number.");
+} else {
+System.out.println(number + " is NOT a Prime Number.");
+}
+}
+}
+----------------------------------------------------------------------------------------------
+Example3:fibonacci 
+
+import java.util.Scanner;
+public class FibonacciRecursive {
+static int fibonacci(int n) {
+if (n == 0) return 0;
+if (n == 1) return 1;
+return fibonacci(n - 1) + fibonacci(n - 2);
+}
+public static void main(String[] args) {
+Scanner sc = new Scanner(System.in);
+System.out.print("Enter number of terms: ");
+int terms = sc.nextInt();
+System.out.println("Fibonacci Series:");
+for (int i = 0; i < terms; i++) {
+System.out.print(fibonacci(i) + " ");
+}
+}
+}
+------------------------------------------------------------------------------------------------
+Example4: Factorial
+
+import java.util.Scanner;
+public class FactorialRecursive {
+static long factorial(int n) {
+if (n == 0 || n == 1) {
+return 1; // base case
+} else {
+return n * factorial(n - 1); // recursive call
+}
+}
+public static void main(String[] args) {
+Scanner sc = new Scanner(System.in);
+System.out.print("Enter a number: ");
+int num = sc.nextInt();
+long result = factorial(num);
+System.out.println("Factorial of " + num + " is: " + result);
+}
+}
+
+
 
 
