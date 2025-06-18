@@ -57,4 +57,90 @@ public class Main{
 Example4:min/max
 
 import java.util.*;
-int
+public class Main {
+public static void main(String[] args) {
+int[] numbers = {45, 22, 89, 3, 67, 99, 12};
+int min = numbers[0];
+int max = numbers[0];
+for(int i = 1; i < numbers.length; i++) {
+if(numbers[i] < min) {
+min = numbers[i];
+}
+if(numbers[i] > max) {
+max = numbers[i];
+}
+}
+System.out.println("Minimum value: " + min);
+System.out.println("Maximum value: " + max);
+}
+}
+
+--------------------------------------------------------------------------------------------------------------------
+Example5: Reverse 
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+int[] arr=new int[]{10,20,30};
+int result[]=new int[arr.length];
+for(int i=0;i<arr.length;i++){
+result[i]=arr[arr.length-1-i];
+System.out.println("Result"+Arrays.toString(result));
+}    
+}
+}
+--------------------------------------------------------------------------------------------------------------------
+Example6: Odd/Even check
+//you can print the output in a single line by using arraylist from collections concept
+
+import java.util.*;
+public class OddEven
+{
+	public static void main(String[] args) {
+	    int[] arr=new int[]{10, 21, 4, 45, 66};
+	   int result[]=new int[arr.length];
+	   int count=0;
+	   int count2=0;
+	    for(int i=0;i<arr.length;i++){
+	       if(arr[i]%2==0){
+	           count++;
+	           System.out.println("Even:"+arr[i]);
+	           System.out.println("count"+count);
+	       }
+	       else{
+	           count2++;
+	           System.out.println("ODD"+arr[i]);
+	           System.out.println("count2:"+count2);
+	       }
+	    }
+	}
+}
+--------------------------------------------------------------------------------------------------------------------
+Example7: 
+import java.util.*;
+public class Main{
+    public static void main(String args[]){
+        Scanner sc=new Scanner(System.in);
+        int n = sc.nextInt();
+        int[] input=new int[n];
+        
+         System.out.println("Enter " + n + " elements:");
+        for (int i = 0; i < input.length; i++) {
+            input[i] = sc.nextInt();
+        }
+        for (int i = 0; i < input.length; i++) {
+            for (int j = i + 1; j < input.length; j++) {
+                if (input[i] == input[j]) {
+                    System.out.println(input[i]);
+                    break;
+                }
+            }
+        }
+        
+    
+        
+        
+        
+    }
+}
