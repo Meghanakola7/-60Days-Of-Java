@@ -1,0 +1,60 @@
+Topics : 1D Arrays
+
+What is an array?
+1. Anarray is a container object that holds a fixed number of values of a single type
+2.When an array is created,the length of an array is fixed
+3.Array elements are automatically initialized with the default value of their type, When an array is created
+4.Array can be created using the new keyword
+
+Creating:  int[] x =  new int[5];
+int x_len = x.length; // to know the length of an array
+---------------------------------------------------------------------------------------------------------------
+Example1:
+import java.util.*;
+public class ArrayDemo{
+public static void main(String args[]){
+Scanner sc=new Scanner(System.in);
+int[] a=new int[]{10,45,89};
+int result=a.length;
+System.out.println("Array display:"+a);
+System.out.println("Length:"+result);
+System.out.println("First:"+a[0]);
+System.out.println("Sec:"+a[1]);
+System.out.println("Third:"+a[2]);
+}
+}
+
+-----------------------------------------------------------------------------------------------------------------
+Example2:arraycopy
+
+import java.util.*;
+public class Main{
+ public static void main(String[] args) {
+ int[] source = {15, 20, 30};
+ int[] dest = new int[3];
+ System.arraycopy(source, 0, dest, 0, source.length);
+ for (int i =0; i < dest.length; i++)
+ System.out.println("Element at index " + i + ": " + 
+dest[i]);
+ }
+ }
+-----------------------------------------------------------------------------------------------------------------
+Example3: sum of arrays
+import java.util.*;
+public class Main{
+ public static void main(String[] args) {
+ // creates and initializes an array of integers
+ int[] a= {100, 200, 300};
+ int[] b={400,500,600};
+ int[] result=new int[a.length];
+ for(int i=0;i<a.length;i++){
+    result[i]=a[i]+b[i];
+ }
+ System.out.println("Add:"+ Arrays.toString(result));
+ }
+ }
+------------------------------------------------------------------------------------------------------------------
+Example4:min/max
+
+import java.util.*;
+int
