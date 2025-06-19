@@ -1,1 +1,37 @@
-Topics : 2D Array
+Topics : 1D Array
+
+-------------------------------------------------------------------------------------
+Example10:Bubblesort
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		System.out.println("Hello World");
+		Scanner sc=new Scanner(System.in);
+		int a=sc.nextInt();
+		int[] arr=new int[a];
+		for(int i = 0; i < arr.length; i++) {
+            arr[i] = sc.nextInt();  // read array elements
+        }
+
+		for(int i=0;i<arr.length;i++){
+		    for(int j=0;j<arr.length;j++){
+		        if(arr[i]>arr[j]){
+		            int temp=arr[i];
+		            arr[i]=arr[j];
+		            arr[j]=temp;
+		        }
+		    }
+		}
+		for(int i = 0; i < arr.length; i++) {
+		                 System.out.print(arr[i] + " ");
+		    
+		}
+		
+	}
+}
+--------------------------------------------------------------------------------------------
+Example11: Arraysort()
+
+
