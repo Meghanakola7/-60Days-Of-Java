@@ -1,1 +1,11 @@
 Topics:2D array
+Arrays with more than one dimension are called as 2D arrays
+Accessing:
+int[][] student={{10,2,3},{2,4,63},{6,1,5}};
+
+Example1:
+import java.util.*;
+public class Student{
+
+Student[] arr;
+        arr = new Student[5];
