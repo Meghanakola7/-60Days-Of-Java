@@ -99,3 +99,26 @@ for (int i = 0; i < arr.length; i++) {
 }}}
 ----------------------------------------------------------------------------------------------
 Example6:Transpose
+public class Transpose
+
+{
+    public static void transpose(int A[][],int B[][]){
+        for(int i=0;i<A.length;i++){
+            for(int j=0;j<B.length;j++){
+                B[i][j]=A[j][i];
+            }
+        }
+       
+    }
+	public static void main(String[] args) {
+		int A[][]={{1,2,3},{4,5,6},{7,8,9}};
+		int B[][]=new int[3][3];
+		transpose(A,B);
+		
+		for(int i=0;i<A.length;i++){
+		    for(int j=0;j<A.length;j++){
+		        System.out.println(B[i][j]);
+		    }
+		}
+	}
+}
