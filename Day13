@@ -1,1 +1,74 @@
-Topics:
+Topics:Strings
+
+String is the type of object that can store a sequence of characters enclosed by double quotes, and every character is stored in 16 bits.A string acts the same as an array of characters.
+There are two ways to create a string in java: 
+1.String Literal:static memory
+2.Using new Keyword:heap memory
+
+(1):using new keyword
+class String{
+public static void main(String args[]){
+String str=new String("Meghana");
+System.out.println(str);
+}}
+
+(2):using String literal
+class String{
+public static void main(String args[]){
+String str="Meghana";
+System.out.println(str);
+}}
+
+
+-----------------------------------------------------------------------------------------------
+Example1:palindrome
+import java.util.Scanner;
+public class Palindrome{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a string: ");
+        String original = sc.nextLine();
+        String reversed = new StringBuilder(original).reverse().toString();
+        if (original.equals(reversed)) {
+            System.out.println("It's a palindrome!");
+        } else {
+            System.out.println("Not a palindrome.");
+        }
+    }
+}
+-----------------------------------------------------------------------------------------------
+Example2:vowel count
+import java.util.Scanner;
+public class Vowelcount{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a string: ");
+        String input = sc.nextLine().toLowerCase(); 
+        int vowelCount = 0;
+        for (int i = 0; i < input.length(); i++) {
+            char ch = input.charAt(i);
+            if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
+                vowelCount++;
+            }
+        }
+        System.out.println("Number of vowels: " + vowelCount);
+    }
+}
+-----------------------------------------------------------------------------------------------
+Example3:Reverse
+
+import java.util.*;
+public class ReverseString{
+public static void main(String args[]){
+Scanner sc=new Scanner(System.in);
+String str=sc.nextLine();
+System.out.println("Original string is:"+str);
+String reversed = new StringBuilder(str).reverse().toString();
+System.out.println("Reversed string:"+reversed);
+}
+}
+-----------------------------------------------------------------------------------------------
+
+
+
+
