@@ -1,0 +1,54 @@
+Topics:Classes & Objects
+
+What is a class?
+A class in Java is a set of objects that share common characteristics and common properties. It is a user-defined blueprint or prototype from which objects are created.
+Components of java:
+1.Class name
+2.Access modifiers
+3.Superclass
+4.Interface
+5.Body
+
+Declaration of a class:
+access_modifier class <class_name> 
+{      
+data member;       
+method;       
+constructor;     
+nested class;     
+interface;
+}
+
+
+What is an object?
+An object is a real-world entity and is an instance of a class.An object is used to invoke a method in a class.
+
+Methods to create an object:
+1.new keyword
+// Java Class example
+class Student {
+    // data member (also instance variable)
+    int id;
+    // data member (also instance variable)
+    String n;
+    public static void main(String args[]) {
+      
+        // creating an object of
+        // Student
+        Student s1 = new Student();
+        System.out.println(s1.id);
+        System.out.println(s1.n);
+    }
+}
+
+2.using Reflection
+Class<?> c = Class.forName("Student");
+// Creating an object of the main class using reflection
+Student o = (Student) c.getDeclaredConstructor().newInstance();
+
+3.using clone()
+// creating object of class Test 
+Test t1 = new Test();
+ // creating clone of above object
+ Test t2 = (Test)t1.clone();
+           
