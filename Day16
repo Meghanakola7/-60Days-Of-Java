@@ -1,0 +1,33 @@
+Topics:Constructors
+
+What are constructors?
+A constructor is a special block of code that is called when an object is created.Its main job is to initialize the object, to set up its internal state, or to assign default values to its attributes.
+This process happens automatically when we use the "new" keyword to create an object.
+Key Points:
+1.The constructor is defined by the same name of the class.
+2.The main purpose of constructor is to initialize the objext.
+3.Constructors do not have any return types
+4.A constructor is automatically called when a classe's object is created.
+
+Syntax:
+class HelloThere{
+HelloThere(){
+\\statements
+}
+}
+HelloThere hi=new HelloThere();
+
+
+Example - 1:
+public class Bank
+{
+    static int accno;
+    Bank(int accnum){
+        this.accno=accnum;
+    }
+	public static void main(String[] args) {
+		System.out.println("Hello User");
+		Bank m=new Bank(134);
+		System.out.println("Accountnumber:"+accno);
+	}
+}
