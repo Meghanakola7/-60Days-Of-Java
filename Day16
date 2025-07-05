@@ -31,3 +31,27 @@ public class Bank
 		System.out.println("Accountnumber:"+accno);
 	}
 }
+
+Types of Constructors:
+1.Default constructors
+2.parameterized constructors
+3.copy custructors
+
+Examples for each type:
+(1)Default constructor:
+class Student{
+static int rollno;
+static String name;
+
+Student(int rollno,String name){
+this.rollno=rollno;
+this.name=name;
+}
+public static void main(String args[]){
+Student stud=new Student(2273,Meghana);
+System.out.println("Roll no of Student:"+rollno);
+System.out.println("Name of Student:"+name);
+}
+}
+
+
