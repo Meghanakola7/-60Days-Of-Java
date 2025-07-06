@@ -39,6 +39,9 @@ Types of Constructors:
 
 Examples for each type:
 (1)Default constructor:
+
+
+(2)Parameterized constructors
 class Student{
 static int rollno;
 static String name;
@@ -53,5 +56,4 @@ System.out.println("Roll no of Student:"+rollno);
 System.out.println("Name of Student:"+name);
 }
 }
-
 
