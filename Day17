@@ -1,0 +1,23 @@
+Topics:Inheritance
+
+What is Inheritance?
+Inheritance is a fundamental concept in OOP's in which a child class can inherit the properties(methods or fields) from it's parent that contains all the properties to be inherited.
+We can achieve inheritance by using "extends" keyword.
+
+Example:
+class Vehicles{
+void Car(){
+System.out.println("Car is one of the vehicles");
+}
+}
+class Bike extends Vehicles{
+Bike(){
+System.out.println("Bike is a vehicle");
+}
+}
+public class Main{
+public static void main(String args[]){
+Bike bike=new Bike();
+bike.Car();
+}
+}
