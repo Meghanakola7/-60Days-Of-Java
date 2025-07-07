@@ -41,14 +41,9 @@ Examples for each type:
 (1)Default constructor:
 import java.io.*;
 class Employee{
-
-    // Default Constructor
     Employee() { 
-        System.out.println("Default constructor"); 
-        
+        System.out.println("Default constructor");
     }
-
-   
     public static void main(String[] args)
     {
        Employee emp = new Employee();
@@ -66,10 +61,32 @@ this.rollno=rollno;
 this.name=name;
 }
 public static void main(String args[]){
-Student stud=new Student(2273,Meghana);
+Student stud=new Student(2273,"Meghana");
 System.out.println("Roll no of Student:"+rollno);
 System.out.println("Name of Student:"+name);
 }
 }
 
 (3)Copy Constructors
+class Student{
+static int rollno;
+static String name;
+
+Student(int rollno,String name){
+this.rollno=rollno;
+this.name=name;
+}
+Student(Student info){
+this.rollno=info.rollno;
+this.name=info.name;
+}
+
+public static void main(String args[]){
+Student stud=new Student(2273,"Meghana");
+System.out.println("Roll no of Student:"+rollno);
+System.out.println("Name of Student:"+name);
+Student student=new Student(stud);
+System.out.println("Roll no of Student:"+rollno);
+System.out.println("Name of Student:"+name);
+}
+}
