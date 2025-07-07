@@ -39,6 +39,21 @@ Types of Constructors:
 
 Examples for each type:
 (1)Default constructor:
+import java.io.*;
+class Employee{
+
+    // Default Constructor
+    Employee() { 
+        System.out.println("Default constructor"); 
+        
+    }
+
+   
+    public static void main(String[] args)
+    {
+       Employee emp = new Employee();
+    }
+}
 
 
 (2)Parameterized constructors
@@ -57,3 +72,4 @@ System.out.println("Name of Student:"+name);
 }
 }
 
+(3)Copy Constructors
