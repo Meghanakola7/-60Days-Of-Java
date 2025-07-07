@@ -21,3 +21,61 @@ Bike bike=new Bike();
 bike.Car();
 }
 }
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Practice examples:
+class Person{
+    static String country="India";
+    String name="Meghana";
+    int age=19;
+    void displayDetails(){
+        System.out.println("Display() called");
+    }
+}
+class Student extends Person{
+    Student(){
+        super();
+        System.out.println("Constructor called");
+        super.displayDetails();
+    }
+    void showStudentInfo(int rollno){
+        System.out.println("Roll no:"+rollno);
+        
+    }
+    @Override
+    void displayDetails(){
+        super.displayDetails();
+    }
+}
+class CollegeStudent extends Student{
+    String collegename="vvitu";
+    
+}
+class Main{
+    public static void main(String args[]){
+        Student stu=new Student();
+        System.out.println("Name:"+stu.name);
+        System.out.println("Age:"+stu.age);
+        System.out.println("*******************");
+        CollegeStudent cstud=new CollegeStudent();
+        System.out.println("Name:"+cstud.name);
+        System.out.println("Age:"+cstud.age);
+        System.out.println("collegename:"+cstud.collegename);
+        System.out.println("Country name through class:"+Person.country);
+        System.out.println("Country name through object:"+stu.country);
+        
+    }
+}
+Output:
+Constructor called
+Display() called
+Name:Meghana
+Age:19
+*******************
+Constructor called
+Display() called
+Name:Meghana
+Age:19
+collegename:vvitu
+Country name through class name:India
+Country name through object:India
