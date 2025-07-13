@@ -1,0 +1,63 @@
+Topics:Polymorphism(Method overload/override)
+
+What is polymorphism?
+The term "polymorphism" means "many forms". In object-oriented programming, polymorphism is useful when you want to create multiple forms with the same name of a single entity.
+To implement polymorphism in Java, we use two concepts method overloading and method overriding.
+Overloading:
+The method overloading is performed in the same class where we have multiple methods with the same name but different parameters.
+Overriding:
+The method overriding is performed by using the inheritance where we can have multiple methods with the same name in parent and child classes.
+
+Example:[Overload]
+public class OverloadExample1 {
+//1 parameter
+    void display(int a) {
+        System.out.println("Integer: " + a);
+    }
+
+    // 2 parameters
+    void display(int a, int b) {
+        System.out.println("Sum: " + (a + b));
+    }
+    public static void main(String[] args) {
+        OverloadExample1 obj = new OverloadExample1();
+        obj.display(5);
+        obj.display(10, 15);
+    }
+}
+
+
+Example:[Override]
+
+class Animal {
+    void sound() {
+        System.out.println("Animal makes a sound");
+    }
+}
+
+class Dog extends Animal {
+    // Overriding the sound() method
+    @Override
+    void sound() {
+        System.out.println("Dog barks");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Animal myAnimal = new Animal();  
+        myAnimal.sound();                
+
+        Dog myDog = new Dog();           
+        myDog.sound();                   
+
+        Animal animalDog = new Dog();    
+        animalDog.sound();               
+    }
+}
+
+Note:Override works only for non-private,non-static and non-final methods.
+
+
+
+
