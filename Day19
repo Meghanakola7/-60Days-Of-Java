@@ -1,0 +1,34 @@
+Topics:Abstraction
+
+What is abstraction?
+In object-oriented programming, an abstraction is a technique of hiding internal details and showing functionalities. The abstract classes and interfaces are used to achieve abstraction in Java.
+The real-world example of an abstraction is a Car, the internal details such as the engine, process of starting a car, process of shifting gears, etc. are hidden from the user, and features such as the start button, gears, display, break, etc are given to the user. 
+When we perform any action on these features, the internal process works.
+
+Example:
+// Abstract class
+abstract class Vehicle {
+    // Abstract method (no body)
+    abstract void start();
+    //concrete method
+    void fuel() {
+        System.out.println("Vehicle needs fuel");
+    }
+}
+
+// Subclass that provides implementation for the abstract method
+class Car extends Vehicle {
+    @Override
+    void start() {
+        System.out.println("Car starts with a key");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        // Vehicle v = new Vehicle(); 
+        Vehicle myCar = new Car();     
+        myCar.start();                
+        myCar.fuel();                  
+    }
+}
