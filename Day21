@@ -37,14 +37,25 @@ book.BuyerInfo(14873);
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //Encapsulation & inheritance
 
-public class StudDemo{
+class StudentDisplay{
 public void Info(String name){
 System.out.println("Name of Student:"+name);
 }
-public class Student extends StudDemo{
+}
+public class Student extends StudentDisplay{
 private int cardno=1912;
 public void Display(String uniname){
 System.out.println("University of Student:"+uniname);
-System.out.println("Cardno of Student:"+cardno);
+//System.out.println("Cardno of Student:"+cardno);
+}
+public int getCardNo() {
+	return cardno;
+}
+public static void main(String args[]) {
+	Student stud=new Student();
+
+	stud.Info("Meghana");
+	stud.Display("VVITU");
+	System.out.println("Univeristy of student:"+stud.getCardNo());
 }
 }
