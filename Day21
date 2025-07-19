@@ -3,3 +3,48 @@ Topics: practice
 1.Library System
 2.Student System
 
+Library System(Abstraction,Polymorphism):
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//Polymorphism & Abstraction
+
+abstract class LibrarySystem{
+abstract void bookinformation(String name,int bookid);
+
+public void BuyerInfo(int rollno){
+	
+}
+}
+public class Bookinfo extends LibrarySystem{
+void bookinformation(String name,int bookid){
+
+System.out.println("Book name is:"+name);
+System.out.println("Book id is:"+bookid);
+}
+@Override
+public void  BuyerInfo(int rollno) {
+	System.out.println("Method is overriden");
+	System.out.println("Roll no:"+rollno);	
+}
+public static void main(String args[]){
+Bookinfo book=new Bookinfo();
+book.bookinformation("Thinking striaght",1032);
+book.bookinformation("Whispers from crave",1071);
+book.BuyerInfo(14873);
+
+}
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//Encapsulation & inheritance
+
+public class StudDemo{
+public void Info(String name){
+System.out.println("Name of Student:"+name);
+}
+public class Student extends StudDemo{
+private int cardno=1912;
+public void Display(String uniname){
+System.out.println("University of Student:"+uniname);
+System.out.println("Cardno of Student:"+cardno);
+}
+}
