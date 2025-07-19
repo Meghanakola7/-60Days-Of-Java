@@ -1,0 +1,86 @@
+Topics:Static, Final, Access Modifiers
+
+Access Modifiers:
+1.Default 
+2.Private
+3.Protected
+4.Public
+
+Default:
+When no access modifier is specified for a class, method, or data member, it is said to have the default access modifier by default. This means only classes within the same package can access it.
+Ex:
+//default class
+class Access{
+  void modifier(){
+    System.out.println("Default modifier demo");
+  }
+}
+
+Private:
+The private access modifier is specified using the keyword private. The methods or data members declared as private are accessible only within the class in which they are declared.
+Ex:
+
+   class Student{
+  private void Details(){
+    String name="Praveen"
+    System.out.println("Name of the student is:"+name);
+  }
+}
+
+Protected:
+The protected access modifier is specified using the keyword protected. 
+The methods or data members declared as protected are accessible within the same package or subclasses in different packages.
+EX:
+
+  class protected Student{
+  protected void Demo(int id){
+    System.out.println("Id of the student:"+id);
+  }
+}
+
+Public:
+The public access modifier is specified using the keyword public. 
+The public access modifier has the widest scope among all other access modifiers.
+Classes, methods, or data members that are declared as public are accessible from everywhere in the program. There is no restriction on the scope of public data members.
+
+Ex:
+public class Student{
+  public void Information(){
+    System.out.println("This is public demo");
+  }
+}
+
+Static:
+The static keyword in Java is used to define members (variables, methods, blocks, or nested classes) that belong to the class itself rather than to any specific object of the class.
+  Ex:
+  class Student {
+    static String college = "VVIT";
+    String name;
+
+    Student(String name) {
+        this.name = name;
+    }
+
+    void display() {
+        System.out.println(name + " from " + college);
+    }
+
+    public static void main(String args[]) {
+        Student s1 = new Student("Arjun");
+        Student s2 = new Student("Meghana");
+        s1.display();
+        s2.display();
+    }
+}
+
+Final:
+The final keyword in Java is used to declare constants, prevent method overriding, and prevent class inheritance.
+  Ex:
+  class Test {
+    final int num = 100;
+
+    void show() {
+        System.out.println("Number is: " + num);
+    }
+}
+
