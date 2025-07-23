@@ -1,0 +1,31 @@
+Topics:imports and packages
+
+Packages:Packages in Java are a mechanism that encapsulates a group of classes, sub-packages, and interfaces.
+1.Prevent naming conflicts by allowing classes with the same name to exist in different packages, like college.staff.cse.Employee and college.staff.ee.Employee.
+2.They make it easier to organize, locate, and use classes, interfaces, and other components.
+3.Packages also provide controlled access for Protected members that are accessible within the same package and by subclasses.
+4.Also, default members (no access specifier) are accessible only within the same package.
+
+imports
+Import statement in Java is helpful to take a class or all classes visible for a program specified under a package, with the help of a single statement. 
+It is pretty beneficial as the programmer do not require to write the entire class definition. Hence, it improves the readability of the program. 
+Ex:import java.util.*;
+
+Program:
+import java.util.Scanner;
+package mypack;
+public class EvenOddCheck {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int number = scanner.nextInt();
+        if (number % 2 == 0) {
+            System.out.println(number + " is Even.");
+        } else {
+            System.out.println(number + " is Odd.");
+        }
+
+        scanner.close();
+    }
+}
+
