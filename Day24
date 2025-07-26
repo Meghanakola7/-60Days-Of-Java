@@ -1,0 +1,61 @@
+Topics:Exception Handling
+
+
+An exception is a unexpected event that occurs during the execution of a program.
+Ex:Opening a non-existing file,diving a number by zero etc..
+public class Main
+{
+	public static void main(String[] args) {
+		System.out.println("Hello World");
+		int a=10;
+		int b=0;
+		int c=a/b;
+		System.out.println("Answer"+c);
+	}
+}
+
+Output:
+Hello World
+Exception in thread "main" java.lang.ArithmeticException: / by zero
+at Main.main(Main.java:15)
+
+
+ Example2:
+public class ExceptionDemo
+{
+	public static void main(String[] args) {
+		System.out.println("Hello World");
+		try{
+		int a=10;
+		int b=0;
+		int c=a/b;
+		System.out.println("Answer"+c);
+		}
+		catch(ArithmeticException e){
+		    System.out.println("You cannot divide a number with zero");
+		    
+		}
+		finally{
+		    System.out.println("Program will continue its execution");
+		}
+	}
+}
+
+Types of Exception:
+1.Built-in Exception 
+2.User defined exception
+
+Built-in:
+Build-in Exception are pre-defined exception classes provided by Java to handle common errors during program execution.
+These are of twp types:
+(i)Checked Exceptions:
+Checked exceptions are called compile-time exceptions because these exceptions are checked at compile-time by the compiler. 
+Ex:ClassNotFoundException,IOException
+(ii)UnChecked Exceptions
+The unchecked exceptions are just opposite to the checked exceptions. The compiler will not check these exceptions at compile time. 
+In simple words, if a program throws an unchecked exception, and even if we did not handle or declare it, the program would not give a compilation error. 
+Ex:ArithmeticException,NullPointerException
+
+User defined:
+The exceptions that are created by user are called as user defined exceptions.
+
