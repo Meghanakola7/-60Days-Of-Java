@@ -1,7 +1,7 @@
 Topics:Exception Handling
 
 
-An exception is a unexpected event that occurs during the execution of a program.
+An exception is a unexpected event that occurs during the execution of a program.When an Exception occurs, the JVM creates an exception object containing the error name, description, and program state. Creating the exception object and handling it in the run-time system is called throwing an exception. 
 Ex:Opening a non-existing file,diving a number by zero etc..
 public class Main
 {
