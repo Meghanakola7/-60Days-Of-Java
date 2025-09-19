@@ -1,0 +1,10 @@
+Topics:File handling
+File class in Java is used to represent the name and path of a file or directory. 
+It provides methods to create, delete, and get information about files and directories.
+
+Ex:import java.io.*;
+public FileHandles{
+public static void main(String args[]){
+File file=new File("MyFile.txt");
+System.out.println("File is created");
+}}
