@@ -68,6 +68,32 @@ System.out.println("Reversed string:"+reversed);
 }
 }
 -----------------------------------------------------------------------------------------------
+Example4:Counting frequencies
+
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        System.out.println("Try programiz.pro");
+        Scanner sc=new Scanner(System.in);
+        String s=sc.nextLine();
+        int fre[]=new int[256];
+        for(int i=0;i<s.length();i++){
+            char each=s.charAt(i);
+            if(Character.isLetterOrDigit(each)){
+                fre[each]++;
+            }
+            
+        }
+        System.out.println("Frequencies");
+        for(int i=0;i<256;i++){
+            if(fre[i]>0){
+                System.out.println((char)i +"->"+ fre[i]);
+            }
+        }
+            
+        }
+    }
+----------------------------------------------------------------------------------------------
 
 
 
