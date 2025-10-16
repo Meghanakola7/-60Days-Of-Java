@@ -1,3 +1,65 @@
 Topics:Arraylist,LinkedList
 
 Arraylist:
+An ArrayList is like a resizable array.
+It is part of the java.util package and implements the List interface.The difference between a built-in array and an ArrayList in Java, is that the size of an array cannot be modified (if you want to add or remove elements to/from an array, you have to create a new one). While elements can be added and removed from an ArrayList whenever you want.
+
+Syntax:
+ArrayList<Integer> arr = new ArrayList<>();
+
+Operations:
+1.add
+2.update
+3.delete
+
+Example:
+import java.util.ArrrayList;
+class Main {
+    public static void main(String args[]){
+         ArrayList<String> al = new ArrayList<>();
+        // 1. Adding elements 
+        al.add("Java");
+        al.add("Developer");
+        System.out.println("Original List : "+al);
+      	// Adding Elements at the specific index
+        al.add(0, "Hello");
+      	System.out.println("After Adding element at index 1 : "+ al);
+      	al.remove(1);
+      	System.out.println("Element removed from index 0 : "+ al);
+        al.set(0, "Welcome");
+        System.out.println("List after updation of value : "+al);
+}
+}
+
+LinkedList:
+The LinkedList stores its elements in "containers." The list has a link to the first container and each container has a link to the next container in the list. To add an element to the list, the element is placed into a new container and that container is linked to one of the other containers in the list.
+The LinkedList class is a collection which can contain many objects of the same type, just like the ArrayList.
+The LinkedList class has the same methods as ArrayList because both follow the List interface. This means you can add, change, remove, or clear elements.
+
+Difference?
+Arraylist works efficient for storing and accessing but linkedlist works for manipulating the data.It contains more methods like getFirst(),getLast(),addFirst(),addLast().
+
+Syntax:
+LinkedList<String> link=new LinkedList<String>();
+                 [or]
+var link=new LinkedList<String>();
+
+Operations:
+1.add
+2.delete
+3.update
+
+Example:
+import java.util.LinkedList;
+
+public class Main {
+  public static void main(String[] args) {
+    LinkedList<String> cars = new LinkedList<String>();
+    cars.add("Volvo");
+    cars.add("BMW");
+    cars.add("Ford");
+    cars.add("Mazda");
+    System.out.println(cars);
+  }
+}
+
