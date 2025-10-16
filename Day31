@@ -1,0 +1,77 @@
+Topics:Stack and Queue
+
+Stack:
+Stack is a linear data structure that follows the Last In First Out (LIFO) principle and is defined in the java.util package. Internally, it extends the Vector class.
+
+Operations:
+1.push
+2.peek
+3.pop
+
+Features:
+1.Preserves order
+2.Dyamic sizing
+3.Allows duplicate and null values
+
+
+Example:
+import java.util.Stack;
+public class Geeks {
+    public static void main(String[] args)
+    {
+        Stack<Integer> s = new Stack<>();
+        s.push(1);
+        s.push(2);
+        s.push(3);
+        s.push(4);
+        while (!s.isEmpty()) {
+            System.out.println(s.pop());
+        }
+    }
+}
+
+Queue:
+The Queue Interface is a part of java.util package and extends the Collection interface. It stores and processes the data in an order where elements are added at the rear and removed from the front.
+
+Features:
+1.FIFO order
+2.No Random Access
+3.Two Sets of Methods(poll,peek),(add,delete,element)
+
+Syntax:
+Queue<Obj> queue = new LinkedList<Obj>();
+We cannot instantiate a Queue directly as it is an interface. Here, we can use a class like LinkedList or PriorityQueue that implements this interface.
+
+Example:
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class Geeks {
+    public static void main(String[] args) {
+        Queue<String> queue = new LinkedList<>();
+
+        // add elements to the queue
+        queue.add("apple");
+        queue.add("banana");
+        queue.add("cherry");
+
+        System.out.println("Queue: " + queue);
+
+        // remove the element at the front of the queue
+        String front = queue.remove();
+        System.out.println("Removed element: " + front);
+
+        // print the updated queue
+        System.out.println("Queue after removal: " + queue);
+
+        // add another element to the queue
+        queue.add("date");
+
+        // peek at the element at the front of the queue
+        String peeked = queue.peek();
+        System.out.println("Peeked element: " + peeked);
+
+        // print the updated queue
+        System.out.println("Queue after peek: " + queue);
+    }
+}
