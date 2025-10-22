@@ -1,1 +1,143 @@
 Topics:Calculator Project
+
+Develop a calculator using java  
+
+Basic Java Code:
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        System.out.println("Try programiz.pro");
+        Scanner sc=new Scanner(System.in);
+        int num1=sc.nextInt();
+        int num2=sc.nextInt();
+        System.out.println("Enter a symbol:(+,/,*,%,-)");
+        char c=sc.next().charAt(0);
+        double o=0;
+        switch(c){
+            case '+':
+                o=num1+num2;
+                System.out.println(o);
+                break;
+            case '-':
+                o=num1-num2;
+                System.out.println(o);
+                break;
+            case '/':
+                if(num1!=0&&num2!=0){
+                o=num1/num2;
+                System.out.println(o);
+                break;
+                }
+                else{
+                    System.out.println("Enter the crt input");
+                }
+            case '%':
+                o=num1%num2;
+                System.out.println(o);
+                break;
+            case '*':
+                o=num1*num2;
+                System.out.println(o);
+                break;
+            default:
+            System.out.println("You enter wrong input");
+            
+        }
+    }
+}
+
+----------------------------------------------------------------------------------------------------------------------------
+Example 2:Using JavaSwing to create a visually appealing display 
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+public class CalculatorGUI extends JFrame implements ActionListener {
+    JTextField textField;
+    double num1 = 0, num2 = 0, result = 0;
+    char operator;
+
+    CalculatorGUI() {
+        setTitle("Simple Calculator");
+        setSize(400, 500);
+        setLayout(null);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        getContentPane().setBackground(new Color(40, 40, 40)); // dark theme
+
+        textField = new JTextField();
+        textField.setBounds(30, 40, 320, 50);
+        textField.setFont(new Font("Arial", Font.BOLD, 22));
+        textField.setEditable(false);
+        add(textField);
+
+        String[] buttons = {
+            "7", "8", "9", "/",
+            "4", "5", "6", "*",
+            "1", "2", "3", "-",
+            "0", ".", "=", "+"
+        };
+
+        int x = 30, y = 120;
+        for (int i = 0; i < buttons.length; i++) {
+            JButton btn = new JButton(buttons[i]);
+            btn.setBounds(x, y, 70, 60);
+            btn.setFont(new Font("Arial", Font.BOLD, 20));
+            btn.setBackground(new Color(70, 70, 70));
+            btn.setForeground(Color.WHITE);
+            btn.addActionListener(this);
+            add(btn);
+            x += 80;
+            if ((i + 1) % 4 == 0) {
+                x = 30;
+                y += 70;
+            }
+        }
+
+        JButton clear = new JButton("C");
+        clear.setBounds(30, y, 320, 60);
+        clear.setFont(new Font("Arial", Font.BOLD, 20));
+        clear.setBackground(new Color(200, 50, 50));
+        clear.setForeground(Color.WHITE);
+        clear.addActionListener(this);
+        add(clear);
+
+        setVisible(true);
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        String command = e.getActionCommand();
+
+        if ((command.charAt(0) >= '0' && command.charAt(0) <= '9') || command.equals(".")) {
+            textField.setText(textField.getText() + command);
+        } else if (command.charAt(0) == 'C') {
+            textField.setText("");
+            num1 = num2 = result = 0;
+        } else if (command.charAt(0) == '=') {
+            num2 = Double.parseDouble(textField.getText());
+            switch (operator) {
+                case '+': result = num1 + num2; break;
+                case '-': result = num1 - num2; break;
+                case '*': result = num1 * num2; break;
+                case '/': 
+                    if (num2 != 0)
+                        result = num1 / num2;
+                    else {
+                        textField.setText("Error");
+                        return;
+                    }
+                    break;
+            }
+            textField.setText("" + result);
+            num1 = result;
+        } else {
+            operator = command.charAt(0);
+            num1 = Double.parseDouble(textField.getText());
+            textField.setText("");
+        }
+    }
+
+    public static void main(String[] args) {
+        new CalculatorGUI();
+    }
+}
