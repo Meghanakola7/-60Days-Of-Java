@@ -23,4 +23,58 @@ JDBC API
 |  Java Application  | -------> | JDBC Driver | ---------> Database
 | _ _ _ _ _ _ _ _ _  |          ---------------
 
+
+
 The java.sql package contains classes and interfaces for JDBC API.
+
+1.JDBC-ODBC Driver:
+The JDBC-ODBC bridge driver uses ODBC driver to connect to the database. The JDBC-ODBC bridge 
+driver converts JDBC method calls into the ODBC function calls. This is now discouraged because of 
+thin driver. 
+
+2.Native Driver
+The Native API driver uses the client-side libraries of the database. The driver converts JDBC method 
+calls into native calls of the database API. It is not written entirely in java. 
+
+3.Network Protocol Driver
+The Network Protocol driver uses middleware (application server) that converts JDBC 
+calls directly or indirectly into the vendor-specific database protocol. It is fully written in 
+java. 
+
+4.Thin Driver
+The thin driver converts JDBC calls directly into the vendor-specific database protocol. That is why it is 
+known as thin driver. It is fully written in Java language. 
+
+Database Connectivity Steps 
+There are 5 steps to connect any java application with the database using JDBC. These steps are as follows: 
+o Register the Driver class 
+o Create connection 
+o Create statement 
+o Execute queries 
+o Close connection 
+
+1) Register the driver class 
+The forName() method of Class class is used to register the driver class. This method is used to 
+dynamically load the driver class. 
+Ex:Class.forName("oracle.jdbc.driver.OracleDriver");   
+
+2)Create Connection Object
+The getConnection() method of DriverManager class is used to establish connection with the 
+database.
+Ex:Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system","password");
+
+3)Create Statement Object
+The createStatement() method of Connection interface is used to create statement. The object 
+of statement is responsible to execute queries with the database.
+Ex:Statement stmt=con.createStatement(); 
+
+4)Execute the Query
+The executeQuery() method of Statement interface is used to execute queries to the database. 
+This method returns the object of ResultSet that can be used to get all the records of a table.
+Ex:ResultSet rs=stmt.executeQuery("select * from emp");   
+while(rs.next()){   
+System.out.println(rs.getInt(1)+" "+rs.getString(2));   
+}   
+
+5)Close the Connection Object
+Ex:con.close(); 
