@@ -1,0 +1,37 @@
+Topics:CRUD Operations
+
+!.Create(INSERT)
+Ex:String sql = "INSERT INTO students (name,email,age) VALUES (?, ?, ?)";
+PreparedStatement ps = con.prepareStatement(sql);
+ps.setString(1, "Alice");
+ps.setString(2, "alice@example.com");
+ps.setInt(3, 21);
+ps.executeUpdate();
+
+2.Read(SELECT)
+Ex:String sql = "SELECT * FROM students WHERE id=?";
+PreparedStatement ps = con.prepareStatement(sql);
+ps.setInt(1, 101);
+ResultSet rs = ps.executeQuery();
+while(rs.next()) {
+    System.out.println(rs.getInt("id")+" "+rs.getString("name"));
+}
+
+3.Update
+String sql = "UPDATE students SET email=? WHERE id=?";
+PreparedStatement ps = con.prepareStatement(sql);
+ps.setString(1, "newemail@example.com");
+ps.setInt(2, 101);
+ps.executeUpdate();
+
+4.Delete
+String sql = "DELETE FROM students WHERE id=?";
+PreparedStatement ps = con.prepareStatement(sql);
+ps.setInt(1, 101);
+ps.executeUpdate();
+
+5.Transactions
+con.setAutoCommit(false); 
+con.commit();            
+con.rollback();          
+
