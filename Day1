@@ -16,7 +16,7 @@ JDK=JRE + Development tools
 
 What is JRE?
 The JRE software builds a runtime environment in which Java programs can be executed. The JRE is the on-disk system that takes your Java code, combines it with the needed libraries, and starts the JVM to execute it.
-The JRE contains libraries and software needed by your Java programs to run. JRE is a part of JDK (which we will study later) but can be downloaded separately.
+The JRE contains libraries and software needed by your Java programs to run. JRE is a part of JDK but can be downloaded separately.
 JRE=JVM + Library Classes
 
 Process:
